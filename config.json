@@ -1,0 +1,84 @@
+{
+  "model": {
+    "min_input_size": 288,
+    "max_input_size": 448,
+    "anchors": [
+      55,
+      69,
+      75,
+      234,
+      133,
+      240,
+      136,
+      129,
+      142,
+      363,
+      203,
+      290,
+      228,
+      184,
+      285,
+      359,
+      341,
+      260
+    ],
+    "labels": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y"
+    ]
+  },
+
+  "train": {
+    "train_image_folder": "/personal/tyokota/keras-yolo3/train_image_folder/",
+    "train_annot_folder": "/personal/tyokota/keras-yolo3/train_annot_folder/",
+    "cache_name": "a-z_without_j_z_only_tats.pkl",
+
+    "train_times": 8,
+    "batch_size": 16,
+    "learning_rate": 1e-4,
+    "nb_epochs": 100,
+    "warmup_epochs": 3,
+    "ignore_thresh": 0.5,
+    "gpus": "0,1",
+
+    "grid_scales": [1, 1, 1],
+    "obj_scale": 5,
+    "noobj_scale": 1,
+    "xywh_scale": 1,
+    "class_scale": 1,
+
+    "tensorboard_dir": "logs",
+    "saved_weights_name": "a-z_without_j_z_only_tats.h5",
+    "debug": true
+  },
+
+  "valid": {
+    "valid_image_folder": "",
+    "valid_annot_folder": "",
+    "cache_name": "",
+
+    "valid_times": 1
+  }
+}
